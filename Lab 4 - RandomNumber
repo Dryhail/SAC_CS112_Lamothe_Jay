@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+/**
+ * Created by INTERNEWS HAITI on 3/23/2016.
+ */
+public class Over18 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int computerNum;
+        int userNum;
+
+
+        System.out.println("Generating a number between 0 and 10: ");
+        computerNum = 0 + (int) (Math.random() * 10);
+
+
+
+        System.out.println("Input a number between 0 and 10:  ");
+        userNum = input.nextInt();
+
+        System.out.println("The number that the user entered is: " + userNum);
+        System.out.println("The system's generated number is:  " +computerNum);
+
+        if (computerNum < userNum) {
+            System.out.println("The number is too big!");
+        }
+        if (computerNum > userNum) {
+            System.out.println("The number is too small!");
+        }
+        if (computerNum == userNum) {
+            System.out.println("The number is correct!");
+        }
+        if (userNum == 0) {
+            System.out.println("The number is supposed to be between 1 and 10!");
+        }
+    }
+}
