@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+/**
+ * Created by INTERNEWS HAITI on 3/23/2016.
+ */
+public class Over18 {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        String x;
+        String z;
+
+        System.out.println("Start!");
+        System.out.print("I'm hungry! ");
+        System.out.print("Let me get in line,");
+        System.out.println(" and buy lunch.");
+        System.out.print("Let's see, am I that thirsty? '\n' Yes or No:  ");
+        x = input.nextLine();
+
+        System.out.print("Have you had breakfast? '\n' Yes or No:  ");
+        z = input.nextLine();
+
+        if ((x.equals("yes")) && (z.equals("yes"))) {
+            System.out.print("Buy a diet coke.");
+        } else if ((x.equals("yes")) && (z.equals("no"))) {
+            System.out.print("Buy a coke!");
+        } else if ((x.equals("no")) && (z.equals("no"))) {
+            System.out.print("Have some water and go home!");
+        } else
+            System.out.print("You've got to say something!");
+    }
+}
