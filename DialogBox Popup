@@ -1,0 +1,31 @@
+import javax.swing.JOptionPane;
+
+/**
+ * Created by INTERNEWS HAITI on 3/16/2016.
+ */
+
+public class Over18 {
+
+    public static void main(String[] args) {
+
+        int computerNum;
+        int personNum;
+        String message;
+        computerNum = 1 + (int) (Math.random() * 10);
+        String var = JOptionPane.showInputDialog("please enter your number: ");
+
+        personNum = Integer.parseInt(var);
+
+        message = String.format("your number is : %d\n", personNum, computerNum);
+        JOptionPane.showMessageDialog(null, message);
+
+        if (computerNum == personNum) {
+            JOptionPane.showMessageDialog(null, "your number is correct!");
+        } else {
+            String messageS = (computerNum > personNum) ? "your numbe s too big" : "Your number is too small";
+            JOptionPane.showMessageDialog(null, messageS);
+
+            JOptionPane.showMessageDialog(null, "thank you! bye!");
+        }
+    }
+}
