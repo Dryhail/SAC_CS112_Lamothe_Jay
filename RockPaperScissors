@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+/**
+ * Created by INTERNEWS HAITI on 3/23/2016.
+ */
+public class RockPaperScissors {
+
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String Paper;
+        String Rock;
+        String Scissors;
+
+        String x;
+
+        System.out.println("Would you like to play a game?: ");
+        x = input.nextLine();
+
+        if (x.equals("yes")) {
+        System.out.println("Let's start the game.");
+
+        int computerNum;
+        int userNum;
+
+
+        System.out.println("Generating a number between 0 and 10: ");
+        computerNum = 1 + (int) (Math.random() * 3);
+
+        //1 - rock
+        //2 - paper
+        //3 - scissors
+
+        System.out.println("Input a number between 1 and 3:  ");
+        userNum = input.nextInt();
+                System.out.println("The number that the user entered is: " + userNum);
+        System.out.println("The system's generated number is:  " + computerNum);
+
+        if ((computerNum == 1) && (userNum == 2) || (computerNum == 2) && (userNum == 3) || (computerNum == 3) && (userNum == 1))
+            ;
+        {
+            System.out.println("User wins!");
+     }
+
+    }
+}
+}
