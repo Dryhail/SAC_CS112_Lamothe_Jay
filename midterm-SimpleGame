@@ -1,0 +1,47 @@
+/**
+ * Created by INTERNEWS HAITI on 3/29/2016.
+ */
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+        public class HomeTest {
+
+            public static void main(String[] args) {
+                int diceNumb, remainder, d=-1;
+                String oddOrEven;
+                Scanner input=new Scanner(System.in);
+
+                String name=
+                        JOptionPane.showInputDialog("What's your name?");
+
+                String message =
+                        String.format("Welcome to the game, %s ", name);
+                JOptionPane.showMessageDialog(null, message);
+
+                JOptionPane.showMessageDialog(null, "Throw a dice");
+                diceNumb= 1+(int)(Math.random()*8);
+                oddOrEven=(JOptionPane.showInputDialog(null, "Do you think the number rolled is odd or even?").toLowerCase());
+
+                //a odd # will have a remainder of 1, while a even # will have a remainder of 0
+                remainder = diceNumb%2;
+                System.out.print(diceNumb +" "+ remainder);//Debug
+
+                if(oddOrEven.equals("odd")||oddOrEven.equals("even")){
+                    switch(oddOrEven){
+                        case "odd":
+                            d=1;break;
+                        case "even":
+                            d=0;break;
+                    }
+                    if(d==remainder)
+                        JOptionPane.showMessageDialog(null, "Good guess, you're right!");
+                    else
+                        JOptionPane.showMessageDialog(null, "You guessed it wrong. Sorry!");
+                }
+                else
+                    JOptionPane.showMessageDialog(null, "Nah, that's not it. Try Again.");
+            }
+
+        }
