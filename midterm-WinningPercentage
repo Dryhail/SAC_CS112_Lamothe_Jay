@@ -1,0 +1,78 @@
+/**
+ * Created by INTERNEWS HAITI on 3/29/2016.
+ */
+
+// - Winning percentage!
+
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+
+public class HomeTest {
+
+    public static void main(String[] args) {
+        int diceNumb, remainder, d = -1;
+        int totalRounds=0;
+        int success=0;
+        int percentage=0;
+        String oddOrEven;
+        String playAgain;
+        boolean playItAgain = false;
+
+        Scanner input = new Scanner(System.in);
+
+        String name=
+                JOptionPane.showInputDialog("What's your name?");
+
+        String message =
+                String.format("Welcome to the game, %s ", name);
+        JOptionPane.showMessageDialog(null, message);
+
+        do
+
+        {
+
+            JOptionPane.showMessageDialog(null, "Throw a dice");
+            diceNumb = 1 + (int) (Math.random() * 8);
+            oddOrEven = (JOptionPane.showInputDialog(null, "Do you think the number rolled is odd or even?").toLowerCase());
+
+            //a odd # will have a remainder of 1, while a even # will have a remainder of 0
+            remainder = diceNumb % 2;
+            System.out.print(diceNumb + " " + remainder);//Debug
+
+            if (oddOrEven.equals("odd") || oddOrEven.equals("even")) {
+                totalRounds++;
+                switch (oddOrEven) {
+                    case "odd":
+                        d = 1;
+                        break;
+                    case "even":
+                        d = 0;
+                        break;
+                }
+                if (d == remainder)
+                    JOptionPane.showMessageDialog(null, "Good guess, you're right!  The dices are: ");
+                else
+                    JOptionPane.showMessageDialog(null, "You guessed it wrong. Sorry!");
+            } else
+                JOptionPane.showMessageDialog(null, "Nah, that's not it. Try Again.");
+
+                    /* This will allow the player to play again */
+
+
+            playAgain = JOptionPane.showInputDialog("So far, you've rolled the dices " +totalRounds+ " times. \n" + " Would you like to continue playing?  y=Yes or n=No");
+                        JOptionPane.showInputDialog("Your winning percentage is:  ", percentage);
+
+            percentage = success / totalRounds;
+            if (playAgain.toLowerCase().equals("y") || playAgain.toLowerCase().equals("yes")) {
+                playItAgain = true;
+            } else {
+                playItAgain = false;
+            }
+        } while (playItAgain);
+
+
+
+
+    }
+}
