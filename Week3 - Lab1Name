@@ -1,0 +1,10 @@
+public class NameSAC {
+
+   public static void main(String [] args) {
+      String name = "Hello, ";
+      String name2 = "my name is Jay!";
+
+      System.out.printf(name);
+      System.out.printf(name2);
+   }
+}
