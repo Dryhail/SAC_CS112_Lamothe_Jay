@@ -1,0 +1,35 @@
+Homework:
+Exercise 4.11 to 4.15
+Bonus: Build a calculator by unconditional add/substract
+mulitiply/devide by 2 numbers
+
+
+
+4.11 - Explain what happens when you divide 2 integers?
+ - If there is a remainder or fractional part, it is deleted or rounded off automatically.  
+- To get the remainder, you may use a remainder % operator.
+- You may avoid the outcome by making the answer a double.
+
+4.12 - What are 2 ways of combining control statemetns?
+ - Control statements can either be stacked or nested!
+
+4.13 - What type of repetition would be appropriate for calculating the sum of the first 100 positive
+integers?
+ - While
+
+ What type would be appropriate for calculating the sum of an arbitrary number of positive integers? 
+ -  While loop with a sentinel
+  
+ Briefly describe how each of these tasks could be performed. 
+ 
+ 1) int ctr = 1; sum =0;
+while (ctr<=100) {
+    sum = sum + ctr;
+    ctr++;
+}
+
+2) int ctr = 1; sum =0;
+while ((num =ctr.nextInt() x<0) {
+    sum = sum + ctr;
+    ctr++;
+}
