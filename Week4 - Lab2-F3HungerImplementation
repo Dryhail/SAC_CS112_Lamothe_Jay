@@ -1,0 +1,47 @@
+// Week 4 - Lab 2 -F3Implementation
+
+import java.util.Scanner;
+
+public class HungerOne {
+
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        Scanner hungry = new Scanner(System.in);
+        Scanner yum = new Scanner(System.in);
+        String hunger;
+        String thirsty;
+        String breakfast;
+
+
+        System.out.println("Are you hungry?: Type Yes or No");
+        hunger = hungry.nextLine();
+
+        if (hunger.equals("Yes")) {
+            System.out.println("You get in line.");
+            System.out.println("You decide to buy lunch\n");
+
+            System.out.println("Are you thirsty?  Yes or No:  ");
+            thirsty = input.nextLine();
+            if (thirsty.equals("Yes"))
+                System.out.print("Since you're thirsty, ");
+                System.out.println("have you had breakfast this morning?:  Yes or No");
+                breakfast = yum.nextLine();
+                if (breakfast.equals("Yes"))
+                    System.out.println("You have to buy a diet coke!");
+                if (breakfast.equals("No"))
+                    System.out.println("You can buy a regular coke!");
+
+            if (thirsty.equals("No"))
+                System.out.println("Since, you're not thirsty, just proceed \n");
+
+            System.out.println("You eat your lunch.");
+            System.out.println("You return your tray.");
+        }
+        if (hunger.equals("No"))
+            System.out.print(" Since you're not hungry, you can shake the spot.");
+    }
+    }
+
