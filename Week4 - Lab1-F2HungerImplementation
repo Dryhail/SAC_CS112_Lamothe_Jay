@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class HungerOne {
+
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+        Scanner hungry = new Scanner(System.in);
+        String hunger;
+        int thirsty;
+
+
+        System.out.println("Are you hungry?: Type Yes or No");
+        hunger = hungry.nextLine();
+
+        if (hunger.equals("Yes")) {
+            System.out.println("You get in line.");
+            System.out.println("You decide to buy lunch\n");
+
+            System.out.println("Are you thirsty?  Say 1 for Yes or and 0 for No?:  ");
+            thirsty = input.nextInt();
+            if (thirsty == 1)
+                System.out.println("You're thirsty, go buy a coke.\n");
+            if (thirsty == 0)
+                System.out.println("Since, you're not thirsty, just proceed \n");
+
+            System.out.println("You eat your lunch.");
+            System.out.println("You return your tray.");
+        }
+        if (hunger.equals("No"))
+            System.out.print(" Since you're not hungry, you can shake the spot.");
+    }
+    }
+
