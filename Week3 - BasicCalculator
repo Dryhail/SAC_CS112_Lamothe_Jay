@@ -1,0 +1,50 @@
+import java.util.Scanner;
+
+public class JavaClass {
+
+        public static void main(String[] args)
+        {
+            int num1;
+            int num2;
+            String operation;
+
+            Scanner input = new Scanner(System.in);
+
+            System.out.println("Please enter the first number: ");
+            num1 = input.nextInt();
+
+            System.out.println("Now enter the second number: ");
+            num2 = input.nextInt();
+
+            Scanner number = new Scanner(System.in);
+            double div=((double)num1/ num2);
+
+            System.out.println("Please enter operation in the form of ( +, -, *, /):");
+            operation = number.next();
+
+            if (operation.equals("+")) {
+
+                System.out.println("We added the first number plus the second number to get: " + (num1 + num2));
+            }
+
+                else if (operation.equals("-"))
+                {
+                    System.out.println("We subtract the first number from the second number to get: " + (num2 - num1));
+            }
+
+                else if (operation.equals("/"))
+                {
+                    System.out.print("We divided the first number by the second number to get: " + (num1 / num2));
+                System.out.println(" Remainder: " + div);
+            }
+                else if (operation.equals("*"))
+                {
+                    System.out.println("We multiplied the first number times the second number to get: " + (num1 * num2));
+            }
+                else
+                    System.out.println("You're not following directions!");
+
+        }
+
+
+    }
