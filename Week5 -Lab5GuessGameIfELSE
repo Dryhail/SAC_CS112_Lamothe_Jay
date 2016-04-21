@@ -1,0 +1,39 @@
+/**
+ * Created by INTERNEWS HAITI on 4/20/2016.
+ */
+import java.util.Scanner;
+public class JavaJava{
+
+    //public class Numbers {
+
+    public static void main(String[] args) {
+
+
+        Scanner input = new Scanner(System.in);
+
+        int computer;
+        int user;
+
+        System.out.print("Please enter a number:  ");
+        user = input.nextInt();
+
+        System.out.print("Computer entered: ");
+        computer = 0 + (int) (Math.random() * 10);
+        System.out.println(computer);
+
+
+        if (user==computer) {
+            System.out.println("The number is the same");
+        }
+        if (user<computer) {
+            System.out.println("The number is too small.");
+        }
+        if (user>computer) {
+            System.out.println("The number is too big.");
+        } else {
+            System.out.println("You're done!");
+        }
+
+
+    }
+    }
