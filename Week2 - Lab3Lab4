@@ -1,0 +1,15 @@
+Lab 3 - How is the JVM different from a VM?
+The JVM executes bytecodes that are translated by the compiler from the source code.
+A VM - is a software application that simulates a computer, hide the underlying OS and Hardware from the program.
+
+
+Lab 4 - 
+1) Where is the Java Compiler?
+Located in the JDK file.
+
+2) Where is the JVM?
+Program file in the JRE Jay
+
+3) What is the version of JVM on your machine? Version8.74
+
+4) What is the latest version of the JVM? Version 8.77
