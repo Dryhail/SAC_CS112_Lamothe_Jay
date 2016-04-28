@@ -1,0 +1,53 @@
+
+import java.util.Scanner;
+public class GuessANumber {
+
+    public static void main(String[] args) {
+
+        int round=1;
+        String answer = "Yes";
+        int userNum;
+        int computerNum;
+
+        Scanner play = new Scanner(System.in);
+        System.out.println("Do you want to play a game? ");
+        answer = play.nextLine();
+
+
+        //for (round = 1; round < 4; ++round)
+
+
+        if (answer.equals("Yes")) {
+            System.out.println("...................Let's play round " + round + " of the game................\n");
+
+            System.out.print("Great, let's start the game.");
+
+            do {
+                System.out.println(" Choose a number between 1 and 10: ");
+                round++;
+                userNum = play.nextInt();
+
+                computerNum = 1 + (int) (Math.random() * 10);
+                System.out.print("You chose the number: " + userNum);
+                System.out.println(" and the system chose the number: " + computerNum);
+
+
+                if (userNum > computerNum) {
+                    System.out.println("The number is too big.");
+                }
+                if (userNum < computerNum) {
+                    System.out.println("The number is too small.");
+                }
+                if (userNum == computerNum) {
+                    System.out.println("The numbers match! Congrats!");
+                } else
+                    System.out.println("");
+                // else {
+                // System.out.println("Thank you for considering but rejecting the game.");
+            }
+            while (round < 4);
+
+        }
+
+    }
+}
