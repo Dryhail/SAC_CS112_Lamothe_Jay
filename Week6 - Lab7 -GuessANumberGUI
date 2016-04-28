@@ -1,0 +1,52 @@
+
+import javax.swing.JOptionPane;
+public class GuessANumber {
+
+    public static void main(String[] args) {
+
+        int round = 1;
+        String answer = "Yes";
+        String answer2 = "Yes";
+        int userNum;
+        int computerNum;
+        String message;
+        String playAgain;
+        String numChoice;
+
+
+        computerNum = 1 + (int) (Math.random() * 10);
+
+        numChoice = JOptionPane.showInputDialog("Please choose a number between 1 and 10: ");
+
+        userNum = Integer.parseInt(numChoice);
+
+        message = String.format("This is your chosen number: %d!\nThis is the computer's number: %d!\n", userNum, computerNum);
+
+        JOptionPane.showMessageDialog(null, message);{
+
+
+        if (userNum > computerNum)
+            JOptionPane.showMessageDialog(null, "The number is too big.");
+
+        if (userNum < computerNum)
+            JOptionPane.showMessageDialog(null, "The number is too small.");
+
+        else
+            JOptionPane.showMessageDialog(null, "The numbers are a match! Congrats!");
+
+
+    }
+
+        numChoice = JOptionPane.showInputDialog("Type \"Yes\" to play again!");
+        answer2 = (numChoice);
+
+
+        if (answer2.equals("Yes"))
+            JOptionPane.showMessageDialog(null, "Lets play again then!");
+        else
+            JOptionPane.showMessageDialog(null, "Thanks for playing, goodbye!");
+
+
+    }
+}
+
