@@ -1,0 +1,54 @@
+/* Created by INTERNEWS HAITI on 4/26/2016.
+ */
+import java.util.Scanner;
+public class GuessANumber {
+
+    public static void main(String[] args) {
+
+        int round=1;
+        String answer = "Yes";
+        String answer2 = "Yes";
+        int userNum;
+        int computerNum;
+
+        Scanner play = new Scanner(System.in);
+        System.out.println("Do you want to play a game? ");
+        answer = play.nextLine();
+
+
+        //for (round = 1; round < 4; ++round)
+
+
+        if (answer.equals("Yes")) {
+
+            while (answer.equals("Yes")) {
+                System.out.println("...................Let's play round " + round + " of the game................\n");
+
+                System.out.print("Great, let's start the game.");
+
+
+                System.out.println(" Choose a number between 1 and 10: ");
+                round++;
+                userNum = play.nextInt();
+
+                computerNum = 1 + (int) (Math.random() * 10);
+                System.out.print("You chose the number: " + userNum);
+                System.out.println(" and the system chose the number: " + computerNum);
+
+                if (userNum == computerNum) {
+                    System.out.println("Congratulations!  You won!!");
+                }
+                if ((userNum > computerNum) || (userNum < computerNum)){
+                    System.out.println("The number is too big.");
+                }
+                else
+
+                    break;
+            }
+        }
+
+
+
+    }
+
+}
