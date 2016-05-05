@@ -1,0 +1,55 @@
+/**
+ * Created by INTERNEWS HAITI on 5/4/2016.
+ */
+
+import java.util.Scanner;
+public class Automobile {
+
+    public static void main(String[] args) {
+
+        Automobile2[] auto=new Automobile2[5];
+
+        auto[0]=new Automobile2("Honda", "Accord", "Yellow",6,1988, "name");
+        auto[0].SetName("Generic");
+
+        auto[1]=new Automobile2("Tesla", "Model 3", "Green",3,2016, "name");
+        auto[1].SetName("Sporty");
+
+        auto[2]=new Automobile2("Acura", "Integra", "Blue",2,2010, "name");
+        auto[2].SetName("TownCar");
+
+        auto[3]=new Automobile2("Toyota", "Pickup", "Black",4,2009, "name");
+        auto[3].SetName("WorkRide");
+
+        auto[4]=new Automobile2("Ford", "Mustang", "Blue",2,1998, "name");
+        auto[4].SetName("Mistake");
+
+
+        String message;
+
+
+        for(int i=0; i <auto.length;i++)
+        {
+            message=auto[i].About();
+            System.out.println(message);
+        }
+
+        int currentSpeed;
+        int cycle;
+
+
+        Scanner gearing = new Scanner(System.in);
+
+
+        System.out.println("\n");
+        System.out.println("Select gear, between 1 and 7:  ");
+        int gearSelect=gearing.nextInt();
+
+        currentSpeed=gearSelect *10;
+        cycle=currentSpeed/60;
+
+        System.out.printf("You're traveling at %d miles per hour.", currentSpeed);
+        System.out.printf(" And your cycle is: %d", cycle);
+    }
+
+}
