@@ -1,0 +1,95 @@
+/*-Professor run this and let me know where the bug may be.  Sometimes, when I run it and the User selects 3, 
+while the computer generates 1, the outcome hangs.  By definition, 1=rock and 3= scissors. 
+Rock beats scissors, so the user would lose. But it just hangs!  Thank you. */
+
+
+import java.util.Scanner;
+public class RockPaperScissors {
+
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+        String Paper;
+        String Rock;
+        String Scissors;
+
+        String x;
+
+        System.out.println("Would you like to play a game?: ");
+        x = input.nextLine();
+
+        if ((x.equals("yes")) || (x.equals("Yes"))) {
+            System.out.println("Let's start the game.");
+
+
+            int computerNum;
+            int userNum=0;
+            String outcome="";
+
+            switch (userNum) {
+                case 1:
+                    outcome = "Rock";
+                    break;
+
+                case 2:
+                    outcome = "Paper";
+                    break;
+
+                case 3:
+                    outcome = "Scissors";
+                    break;
+
+                default:
+                    break;
+            }
+            System.out.println(outcome);
+
+
+            System.out.println("Generating a number between 1 and 3: ");
+            computerNum = 1 + (int) (Math.random() * 3);
+
+            //1 - rock
+            //2 - paper
+            //3 - scissors
+
+            System.out.println("Input a number between 1 and 3:  ");
+            userNum = input.nextInt();
+            System.out.println("The number that the user entered is: \n" + userNum);
+            System.out.println("The system's generated number is:  \n" + computerNum);
+
+            if ((computerNum == 1) && (userNum == 2) || (computerNum == 2) && (userNum == 3) || (computerNum == 3) && (userNum == 1))
+                {
+                    System.out.println(" ******User wins!*******");
+                }
+
+            else if (computerNum==userNum) {
+                    System.out.println("It's a draw, please play again. No winners!");
+                }
+
+            } else
+                System.out.println(" *****Computer Wins!*******");
+        }
+    }
+
+/*
+
+            if ((computerNum == 1) && (userNum == 2)) {
+                System.out.println("Paper beats Rock, so user wins!");
+            }
+            else if ((computerNum == 2) && (userNum == 3)) {
+                System.out.println("Scissors cuts paper, so user wins!");
+            }
+            else if ((computerNum == 3) && (userNum == 1)) {
+                System.out.println("Rock breaks Scissors, so user wins!");
+            }
+            else if (computerNum==userNum){
+                System.out.println("It's a draw, do it over!");
+            }else {
+                System.out.println("You lost! Computer wins!");
+            }
+
+        }
+    }
+}
+    */
