@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Switch {
+
+    public static void main(String[] args) {
+
+        int computerNum;
+        int userNum;
+        String message;
+
+        Scanner play=new Scanner(System.in);
+
+        computerNum= 1 + (int) Math.random()*10;// random 1-10
+
+        System.out.println("Please enter your number :");
+        userNum = play.nextInt();
+
+        System.out.println("Your chosen number is: " + userNum);
+        System.out.println("The generated number is: " +computerNum);
+        System.out.println("----------------------- \n");
+
+        boolean tooBig=(computerNum < userNum);
+        boolean isEqual=(computerNum == userNum);
+        if(isEqual)
+        {
+            System.out.println("your number is correct!! You Won!!! ");
+        }
+        else
+        {
+            String messageS = (tooBig) ? "Your number is too big\n":"your number is too small\n";
+            System.out.println( messageS);
+        }
+
+        System.out.println("Thanks for playing!  Tootles!");
+    }
+
+}
