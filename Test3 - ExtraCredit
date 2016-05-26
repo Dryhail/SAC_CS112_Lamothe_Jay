@@ -1,0 +1,158 @@
+/**
+ * Created by Marrie on 5/20/2016.
+ */
+// - Automobile File
+import java.util.Scanner;
+public class Automobile {
+
+    public static void main(String[] args) {
+
+        Automobile2[] auto=new Automobile2[5];
+
+        auto[0]=new Automobile2("Honda", "Accord", "Yellow",6,1988, "name");
+        auto[0].SetName("Generic");
+
+        auto[1]=new Automobile2("Tesla", "Model 3", "Green",3,2016, "name");
+        auto[1].SetName("Sporty");
+
+        auto[2]=new Automobile2("Acura", "Integra", "Blue",2,2010, "name");
+        auto[2].SetName("TownCar");
+
+        auto[3]=new Automobile2("Toyota", "Pickup", "Black",4,2009, "name");
+        auto[3].SetName("WorkRide");
+
+        auto[4]=new Automobile2("Ford", "Mustang", "Blue",2,1998, "name");
+        auto[4].SetName("Mistake");
+
+
+        String message;
+
+
+        for(int i=0; i <auto.length;i++)
+        {
+            message=auto[i].About();
+            System.out.println(message);
+        }
+
+        int currentSpeed;
+        int cycle;
+
+
+        Scanner gearing = new Scanner(System.in);
+
+
+        System.out.println("\n");
+        System.out.println("Select gear, between 1 and 7:  ");
+        int gearSelect=gearing.nextInt();
+
+        currentSpeed=gearSelect *10;
+        cycle=currentSpeed/60;
+
+        System.out.printf("You're traveling at %d miles per hour.", currentSpeed);
+        System.out.printf(" And your cycle is: %d", cycle);
+    }
+
+}
+
+-----------------------------------------------------------------------------------------
+//Automobile2 - file
+
+
+import java.util.Scanner;
+public class Automobile2 {
+
+    private String make;
+    private String model;
+    private String color;
+    private int cylinder;
+    private int year;
+    private String name = null;
+
+
+    public Automobile2 (String make, String model, String color, int cylinder, int year, String name)
+    {
+        this.make=make;
+        this.model=model;
+        this.color=color;
+        this.cylinder=cylinder;
+        this.year=year;
+        this.name=name;
+
+    }
+    public Automobile2 (String model, String color, int cylinder, int year, String name)
+    {
+        this.model=model;
+        this.color=color;
+        this.cylinder=cylinder;
+        this.year=year;
+        this.name=name;
+
+    }
+    public Automobile2 (String color, int cylinder, int year, String name )
+    {
+        this.color=color;
+        this.cylinder=cylinder;
+        this.year=year;
+        this.name=name;
+
+    }
+    public Automobile2 (int cylinder, int year, String name )
+    {
+        this.cylinder=cylinder;
+        this.year=year;
+        this.name=name;
+    }
+    public Automobile2 (int year, String name ) {
+        this.year = year;
+        this.name = name;
+    }
+    public Automobile2 (String name )
+    {
+        this.name=name;
+    }
+    public Automobile2 ()
+    {
+    }
+    public void SetName(String n)
+    {
+        name=n;
+    }
+    public void SetMake(String m)
+    {
+        make =m;
+    }
+    public void SetModel(String md)
+    {
+        model=md;
+    }
+    public void SetColor(String c)
+    {
+        color=c;
+    }
+    public void SetCylinder(int cd)
+    {
+        cylinder=cd;
+    }
+    public void SetYear(int y)
+    {
+        year=y;
+    }
+
+    public String About()
+    {	String autoMobile=null;
+        if(make!=null)
+            autoMobile="\nCar make is: "+make;
+        if(model!=null)
+            autoMobile=autoMobile+ "\nCar model is: "+model;
+        if(color!=null)
+            autoMobile=autoMobile+ "\nCar color is: "+color;
+        if(cylinder!=0)
+            autoMobile=autoMobile+ "\nCar has this many cylinders: "+ cylinder;
+        if(year!=0)
+            autoMobile=autoMobile+"\nCar year is: "+year;
+        if(name!=null)
+        autoMobile=autoMobile+"\nCar's name is: "+name;
+
+        return autoMobile;
+    }
+}
